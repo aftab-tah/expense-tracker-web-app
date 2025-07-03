@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #ECFDF5;
+  color: #333;
+}
+
+/* Header */
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1E293B;
+}
+
+.app-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+
+/* Balance */
+.balance {
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+h1 {
+  font-size: 2rem;
+  color: 	#10B981;
+  margin-top: 5px;
+}
+
+h4 {
+  font-weight: 500;
+  color: #888;
+}
+
+/* Income & Expense */
+.inc-exp-container {
+  display: flex;
+  justify-content: space-between;
+  background: #F5FFFA;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+}
+
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
+  border-right: 1px solid #ddd;
+}
+
+.inc-exp-container > div:last-child {
+  border-right: none;
+}
+
+.money {
+  font-size: 1.2rem;
+  margin-top: 5px;
+}
+
+.plus {
+  color: #16A34A;
+}
+
+.minus {
+  color: #DC2626;
+}
+
+/* Layout Section */
+.content-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-section {
+  margin-bottom: 20px;
+}
+
+.bottom-section {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.transaction-section, .add-transaction-section {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.top-section, .bottom-section, .transaction-section, .add-transaction-section {
+ background: #F5FFFA;
+}
+/* Transaction List */
+.list {
+  background-color: #F9FAFB;
+  max-height: 250px;
+  list-style: none;
+  margin-top: 15px;
+  overflow: scroll;
+}
+
+.list li {
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0,0,0,0.08);
+  padding: 12px 15px;
+  border-right: 5px solid;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+}
+
+.list li.plus {
+  border-color: #2ecc71;
+}
+
+.list li.minus {
+  border-color: #e74c3c;
+}
+
+.delete-btn {
+  cursor: pointer;
+  background: #ff6b6b;
+  border: none;
+  color: white;
+  font-size: 14px;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.delete-btn:hover {
+  background: #e60000;
+}
+
+/* Add Transaction */
+.form-control {
+  margin-bottom: 20px;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #555;
+}
+
+.form-control input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #E5E7EB;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-control input:focus {
+  border-color: #7f5af0;
+}
+
+.btn-debit {
+  width: 45%;
+  padding: 12px;
+  border: none;
+  background: #fd0000;
+  color: #000;
+  font-size: 1.01rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-debit:hover {
+  background: #B91C1C;
+  color: #fff;
+}
+
+.btn-credit {
+  width: 45%;
+  padding: 12px;
+  margin-left: 7%;
+  border: none;
+  background: #00ff4c;
+  color: #000;
+  font-size: 1.01rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-credit:hover {
+  background: #15803D;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .app-container {
+    max-width: 98vw;
+    padding: 10px;
+  }
+  .bottom-section {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .transaction-section, .add-transaction-section {
+    min-width: unset;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-container {
+    padding: 5px;
+  }
+  .top-section, .bottom-section, .transaction-section, .add-transaction-section {
+    padding: 10px;
+    border-radius: 8px;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+  .inc-exp-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .form-control input {
+    padding: 8px;
+    font-size: 1rem;
+  }
+  .btn-debit, .btn-credit {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}
